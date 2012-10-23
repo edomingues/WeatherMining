@@ -29,7 +29,7 @@ class ClimetuaParser {
 		percentagePattern = Pattern.compile("([0-9]+)%");
 		windPattern = Pattern.compile("(" + Direction.generateRegularExpression() + ") at ("+DOUBLE_REGEX+") m/s");
 		barometerPattern = Pattern.compile("("+DOUBLE_REGEX+") hPa & (.*)");
-		measurePattern = Pattern.compile("("+DOUBLE_REGEX+")[ ]*([^ ]+)");
+		measurePattern = Pattern.compile("("+DOUBLE_REGEX+")[ ]*([^ ]*)");
 	}
 	
 	public Weather parse(Document doc) {		
