@@ -9,7 +9,7 @@ import javax.persistence.Id;
 public class Weather {
 	@Id
     @Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
-    private long id;
+    private Long id;
 	private long dateTime;
 	private double temperatureCelcius;
 	private double humidityPercentage;
