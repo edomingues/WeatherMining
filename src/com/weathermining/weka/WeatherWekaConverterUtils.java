@@ -5,7 +5,6 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Iterator;
 
-import javafe.util.Set;
 import weka.core.Attribute;
 import weka.core.FastVector;
 import weka.core.Instance;
@@ -140,12 +139,12 @@ public class WeatherWekaConverterUtils {
 		return values;
 	}
 
-	private static RainIntensity classifyRainIntensity(double rainRate) {
-		if(rainRate == 0)
+	private static RainIntensity classifyRainIntensity(double rainRateMillimetersPerHour) {
+		if(rainRateMillimetersPerHour == 0)
 			return RainIntensity.None;
-		else if(rainRate <= 250)
+		else if(rainRateMillimetersPerHour <= 2.5)
 			return RainIntensity.Light;
-		else if(rainRate <= 760)
+		else if(rainRateMillimetersPerHour <= 7.6)
 			return RainIntensity.Moderate;
 		else 
 			return RainIntensity.Heavy;
